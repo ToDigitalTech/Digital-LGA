@@ -1,0 +1,79 @@
+/**
+ * Digital LGA - Admin Styles
+ *
+ * @package DigitalLGA
+ * @since 1.0.0
+ */
+
+.dlga-admin-wrap {
+    max-width: 1200px;
+}
+
+.dlga-admin-wrap h1 {
+    color: #2C5F2D;
+}
+
+.dlga-admin-card {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+.dlga-admin-card h3 {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.dlga-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.dlga-badge-high {
+    background: #FEE2E2;
+    color: #991B1B;
+}
+
+.dlga-badge-medium {
+    background: #FEF3C7;
+    color: #92400E;
+}
+
+.dlga-badge-low {
+    background: #D1FAE5;
+    color: #065F46;
+}
+
+.dlga-badge-success {
+    background: #D1FAE5;
+    color: #065F46;
+}
+
+.dlga-badge-danger {
+    background: #FEE2E2;
+    color: #991B1B;
+}
+
+/* Pool total validation */
+#dlga-pool-total {
+    font-weight: 700;
+}
+
+#dlga-pool-total.invalid {
+    color: #EF4444;
+}
+
+#dlga-pool-total.valid {
+    color: #10B981;
+}

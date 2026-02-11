@@ -1,0 +1,751 @@
+/**
+ * Digital LGA - Public Styles
+ *
+ * Mobile-first, high-contrast CSS for Nigerian context.
+ *
+ * @package DigitalLGA
+ * @since 1.0.0
+ */
+
+:root {
+    --dlga-primary: #2C5F2D;
+    --dlga-primary-light: #3a7d3e;
+    --dlga-secondary: #1E3A8A;
+    --dlga-secondary-light: #2563EB;
+    --dlga-accent: #F59E0B;
+    --dlga-success: #10B981;
+    --dlga-danger: #EF4444;
+    --dlga-warning: #F59E0B;
+    --dlga-bg: #F9FAFB;
+    --dlga-bg-white: #FFFFFF;
+    --dlga-text: #111827;
+    --dlga-text-muted: #6B7280;
+    --dlga-border: #D1D5DB;
+    --dlga-border-light: #E5E7EB;
+    --dlga-radius: 8px;
+    --dlga-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --dlga-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Base */
+.dlga-form-wrap,
+.dlga-dashboard,
+.dlga-transparency,
+.dlga-company-profile,
+.dlga-tender-listing,
+.dlga-tender-single,
+.dlga-login-form {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--dlga-text);
+}
+
+/* Typography */
+.dlga-form-wrap h1,
+.dlga-dashboard h1,
+.dlga-transparency h1,
+.dlga-company-profile h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--dlga-primary);
+}
+
+.dlga-form-wrap h2,
+.dlga-dashboard h2,
+.dlga-transparency h2,
+.dlga-section h2 {
+    font-size: 1.5rem;
+    margin: 1.5rem 0 1rem;
+    color: var(--dlga-text);
+    border-bottom: 2px solid var(--dlga-primary);
+    padding-bottom: 0.5rem;
+}
+
+.dlga-form-wrap h3,
+.dlga-dashboard h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Cards */
+.dlga-card {
+    background: var(--dlga-bg-white);
+    border: 1px solid var(--dlga-border-light);
+    border-radius: var(--dlga-radius);
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: var(--dlga-shadow);
+}
+
+/* Stats Grid */
+.dlga-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin: 16px 0;
+}
+
+.dlga-stat-card {
+    background: var(--dlga-bg-white);
+    border: 1px solid var(--dlga-border-light);
+    border-radius: var(--dlga-radius);
+    padding: 20px;
+    text-align: center;
+    box-shadow: var(--dlga-shadow);
+}
+
+.dlga-stat-value {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--dlga-primary);
+    line-height: 1.2;
+}
+
+.dlga-stat-label {
+    font-size: 0.875rem;
+    color: var(--dlga-text-muted);
+    margin-top: 4px;
+}
+
+.dlga-stats-row {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin: 16px 0;
+}
+
+.dlga-stat {
+    flex: 1;
+    min-width: 120px;
+    background: var(--dlga-bg-white);
+    border: 1px solid var(--dlga-border-light);
+    border-radius: var(--dlga-radius);
+    padding: 16px;
+    text-align: center;
+}
+
+/* Forms */
+.dlga-form fieldset {
+    border: 1px solid var(--dlga-border-light);
+    border-radius: var(--dlga-radius);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.dlga-form fieldset legend {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--dlga-primary);
+    padding: 0 8px;
+}
+
+.dlga-form-group {
+    margin-bottom: 16px;
+}
+
+.dlga-form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: var(--dlga-text);
+}
+
+.dlga-form-group input[type="text"],
+.dlga-form-group input[type="email"],
+.dlga-form-group input[type="password"],
+.dlga-form-group input[type="tel"],
+.dlga-form-group input[type="number"],
+.dlga-form-group input[type="url"],
+.dlga-form-group select,
+.dlga-form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--dlga-border);
+    border-radius: 6px;
+    font-size: 16px;
+    background: var(--dlga-bg-white);
+    color: var(--dlga-text);
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+
+.dlga-form-group input:focus,
+.dlga-form-group select:focus,
+.dlga-form-group textarea:focus {
+    outline: none;
+    border-color: var(--dlga-primary);
+    box-shadow: 0 0 0 3px rgba(44, 95, 45, 0.15);
+}
+
+.dlga-form-group small {
+    display: block;
+    color: var(--dlga-text-muted);
+    font-size: 0.85rem;
+    margin-top: 4px;
+}
+
+.dlga-form-row {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.dlga-form-row .dlga-form-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+.dlga-radio-group {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.dlga-radio-group label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+/* Buttons */
+.dlga-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    min-height: 44px;
+    min-width: 44px;
+    transition: background-color 0.2s, transform 0.1s;
+    line-height: 1.4;
+}
+
+.dlga-btn:active {
+    transform: scale(0.98);
+}
+
+.dlga-btn-primary {
+    background: var(--dlga-primary);
+    color: #fff;
+}
+
+.dlga-btn-primary:hover {
+    background: var(--dlga-primary-light);
+    color: #fff;
+}
+
+.dlga-btn-secondary {
+    background: var(--dlga-secondary);
+    color: #fff;
+}
+
+.dlga-btn-secondary:hover {
+    background: var(--dlga-secondary-light);
+    color: #fff;
+}
+
+.dlga-btn-danger {
+    background: var(--dlga-danger);
+    color: #fff;
+}
+
+.dlga-btn-outline {
+    background: transparent;
+    border: 2px solid var(--dlga-primary);
+    color: var(--dlga-primary);
+}
+
+.dlga-btn-outline:hover {
+    background: var(--dlga-primary);
+    color: #fff;
+}
+
+/* Tables */
+.dlga-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    background: var(--dlga-bg-white);
+    border-radius: var(--dlga-radius);
+    overflow: hidden;
+    box-shadow: var(--dlga-shadow);
+}
+
+.dlga-table thead {
+    background: var(--dlga-primary);
+    color: #fff;
+}
+
+.dlga-table th {
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.dlga-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--dlga-border-light);
+    vertical-align: top;
+}
+
+.dlga-table tbody tr:hover {
+    background: #f0fdf0;
+}
+
+.dlga-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Badges */
+.dlga-badge {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.dlga-badge-success {
+    background: #D1FAE5;
+    color: #065F46;
+}
+
+.dlga-badge-warning {
+    background: #FEF3C7;
+    color: #92400E;
+}
+
+.dlga-badge-danger {
+    background: #FEE2E2;
+    color: #991B1B;
+}
+
+.dlga-badge-info {
+    background: #DBEAFE;
+    color: #1E40AF;
+}
+
+.dlga-badge-pending {
+    background: #FEF3C7;
+    color: #92400E;
+}
+
+.dlga-badge-high {
+    background: #FEE2E2;
+    color: #991B1B;
+}
+
+.dlga-badge-medium {
+    background: #FEF3C7;
+    color: #92400E;
+}
+
+.dlga-badge-low {
+    background: #D1FAE5;
+    color: #065F46;
+}
+
+/* Notices */
+.dlga-notice {
+    padding: 12px 16px;
+    border-radius: var(--dlga-radius);
+    margin-bottom: 16px;
+    border-left: 4px solid;
+}
+
+.dlga-notice-success {
+    background: #D1FAE5;
+    border-color: var(--dlga-success);
+    color: #065F46;
+}
+
+.dlga-notice-error {
+    background: #FEE2E2;
+    border-color: var(--dlga-danger);
+    color: #991B1B;
+}
+
+.dlga-notice-warning {
+    background: #FEF3C7;
+    border-color: var(--dlga-warning);
+    color: #92400E;
+}
+
+.dlga-notice-info {
+    background: #DBEAFE;
+    border-color: var(--dlga-secondary);
+    color: #1E40AF;
+}
+
+/* Progress Bar */
+.dlga-progress-bar {
+    width: 100%;
+    height: 24px;
+    background: var(--dlga-border-light);
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 8px 0;
+}
+
+.dlga-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--dlga-primary), var(--dlga-success));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    transition: width 0.5s ease;
+}
+
+.dlga-progress-fill span {
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+/* Pool Cards */
+.dlga-pools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    margin: 16px 0;
+}
+
+.dlga-pool-card {
+    background: var(--dlga-bg-white);
+    border-radius: var(--dlga-radius);
+    padding: 20px;
+    border-left: 4px solid;
+    box-shadow: var(--dlga-shadow);
+}
+
+.dlga-pool-card h3 {
+    margin: 0 0 8px;
+    font-size: 1rem;
+}
+
+.dlga-pool-balance {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.dlga-pool-personnel {
+    border-color: var(--dlga-primary);
+}
+
+.dlga-pool-personnel .dlga-pool-balance {
+    color: var(--dlga-primary);
+}
+
+.dlga-pool-infrastructure {
+    border-color: var(--dlga-secondary);
+}
+
+.dlga-pool-infrastructure .dlga-pool-balance {
+    color: var(--dlga-secondary);
+}
+
+.dlga-pool-emergency {
+    border-color: var(--dlga-accent);
+}
+
+.dlga-pool-emergency .dlga-pool-balance {
+    color: var(--dlga-accent);
+}
+
+.dlga-pool-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 0;
+}
+
+.dlga-pool-card ul li {
+    padding: 4px 0;
+    border-bottom: 1px solid var(--dlga-border-light);
+    font-size: 0.9rem;
+}
+
+/* Projects Grid */
+.dlga-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+    margin: 16px 0;
+}
+
+.dlga-project-card {
+    background: var(--dlga-bg-white);
+    border: 1px solid var(--dlga-border-light);
+    border-radius: var(--dlga-radius);
+    padding: 16px;
+    box-shadow: var(--dlga-shadow);
+}
+
+.dlga-project-card h3 {
+    margin: 0 0 8px;
+}
+
+.dlga-project-card h3 a {
+    color: var(--dlga-secondary);
+    text-decoration: none;
+}
+
+.dlga-project-card h3 a:hover {
+    text-decoration: underline;
+}
+
+.dlga-project-completed {
+    border-left: 4px solid var(--dlga-success);
+}
+
+/* Transparency Header */
+.dlga-transparency-header {
+    text-align: center;
+    padding: 24px 0;
+    border-bottom: 2px solid var(--dlga-primary);
+    margin-bottom: 24px;
+}
+
+.dlga-transparency-header h1 {
+    color: var(--dlga-primary);
+    margin-bottom: 4px;
+}
+
+.dlga-transparency-header p {
+    color: var(--dlga-text-muted);
+    margin: 0;
+}
+
+/* Section */
+.dlga-section {
+    margin-bottom: 32px;
+}
+
+/* Info Box */
+.dlga-info-box {
+    background: #EFF6FF;
+    border: 1px solid #BFDBFE;
+    border-radius: var(--dlga-radius);
+    padding: 20px;
+    margin-top: 24px;
+}
+
+.dlga-info-box h3 {
+    margin-top: 0;
+    color: var(--dlga-secondary);
+}
+
+.dlga-info-box ol {
+    padding-left: 20px;
+}
+
+.dlga-info-box ol li {
+    margin-bottom: 8px;
+}
+
+/* Login Form */
+.dlga-login-form {
+    max-width: 400px;
+}
+
+.dlga-register-links {
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid var(--dlga-border-light);
+}
+
+.dlga-register-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.dlga-register-links a {
+    color: var(--dlga-secondary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.dlga-register-links a:hover {
+    text-decoration: underline;
+}
+
+/* Payroll Table */
+.dlga-payroll-table {
+    font-size: 0.9rem;
+}
+
+.dlga-payroll-summary {
+    background: #F0FDF4;
+    border: 1px solid #BBF7D0;
+    border-radius: var(--dlga-radius);
+    padding: 16px;
+    margin: 16px 0;
+}
+
+.dlga-payroll-settings-info {
+    background: #EFF6FF;
+    border: 1px solid #BFDBFE;
+    border-radius: var(--dlga-radius);
+    padding: 16px;
+    margin-bottom: 20px;
+}
+
+.dlga-payroll-settings-info ul {
+    margin: 8px 0 0;
+    padding-left: 20px;
+}
+
+/* Thankyou breakdown */
+.dlga-thankyou-breakdown {
+    background: #F0FDF4;
+    border: 1px solid #BBF7D0;
+    border-radius: var(--dlga-radius);
+    padding: 20px;
+    margin: 20px 0;
+}
+
+/* Tender detail */
+.dlga-tender-detail {
+    margin-bottom: 24px;
+}
+
+.dlga-tender-meta {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin: 8px 0;
+    color: var(--dlga-text-muted);
+    font-size: 0.9rem;
+}
+
+/* Bid Card */
+.dlga-bid-card {
+    background: var(--dlga-bg-white);
+    border: 1px solid var(--dlga-border-light);
+    border-radius: var(--dlga-radius);
+    padding: 20px;
+    margin-bottom: 16px;
+}
+
+.dlga-bid-card.dlga-bid-winner {
+    border-color: var(--dlga-success);
+    border-width: 2px;
+}
+
+/* Verification */
+.dlga-verification-item {
+    background: var(--dlga-bg);
+    border-radius: var(--dlga-radius);
+    padding: 12px;
+    margin-bottom: 8px;
+}
+
+/* Filter */
+.dlga-filter-form {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    margin-bottom: 20px;
+    padding: 16px;
+    background: var(--dlga-bg);
+    border-radius: var(--dlga-radius);
+}
+
+.dlga-filter-form select {
+    padding: 8px 12px;
+    border: 1px solid var(--dlga-border);
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* Pagination */
+.dlga-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 24px 0;
+}
+
+.dlga-pagination a,
+.dlga-pagination span {
+    padding: 8px 14px;
+    border: 1px solid var(--dlga-border);
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--dlga-text);
+}
+
+.dlga-pagination .current {
+    background: var(--dlga-primary);
+    color: #fff;
+    border-color: var(--dlga-primary);
+}
+
+/* Responsive */
+@media (min-width: 640px) {
+    .dlga-stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 639px) {
+    .dlga-form-row {
+        flex-direction: column;
+    }
+
+    .dlga-table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .dlga-stat-value {
+        font-size: 1.25rem;
+    }
+
+    .dlga-filter-form {
+        flex-direction: column;
+    }
+
+    .dlga-register-links ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .dlga-btn,
+    .dlga-form,
+    .dlga-filter-form {
+        display: none;
+    }
+
+    .dlga-card,
+    .dlga-stat-card,
+    .dlga-project-card {
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+}
